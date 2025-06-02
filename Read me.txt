@@ -1,0 +1,49 @@
+---PROYECTO FINAL DE PROGRAMACIÓN: CINÉFILO DE REVOLICO---
+
+Explicacion del proyecto:
+
+El siguiente proyecto desarrollará una aplicación web capaz de almacenar datos de películas, series, cortos, etc etc.
+
+Para este proyecto se utilizará una base de datos que almacena datos de muchos filmes. Capaz de desarrollar un buen análisis de datos en masa.
+
+info Base de datos: IMDb Datasets (Datos oficiales en formato TSV)
+enlace: https://www.imdb.com/interfaces/ 
+
+En esta base de datos se va a utilizar inicialmente el archivo tittle.basics.tsv.gz el cual contiene los siguientes datos:
+titleType (string):
+  tipo de titulo: movie,tvSeries , short , tvmovie , etc etc
+primaryTitle(string):
+  Título principal en el idioma original (ejemplo: Inception)
+originalTitle(string):
+  Título original(difiere del anterior parámetro si se tradujo, ejemplo títulos de filmes Japoneses como Seven Samurai que se escriben en Hiragana o Kanji)
+isAdult (boolean):
+  0 = no es contenido adulto, 1 = Contenido adulto
+startYear(string):
+  Año de estreno (ejemplo 1994). Vacío si es desconocida la fecha
+endYear:
+  Año de finalización (para series). Vacío para filmes como película
+runtimeMinutes (string):
+  duración en minutos. Vacío si no hay datos
+genres(string):
+  Lista de géneros separados por comas (ejemplo: Action, Crime, Drama)
+
+Al terminar la primera versión del proyecto se podría incluir la base de datos title.ratings.tsv.gz para hacer análisis sobre la calidad del filme
+
+Posibles análisis a realizar:
+
+Películas: 
+Años con más estrenos de X género
+Géneros más comunes en X año
+Películas más duraderas/cortas de X año
+Comparación de géneros (ver cuál es más común en Películas)
+Años donde se estrenaron más películas
+
+Series:
+Análisis de series con mayor/menor tiempo en emisión en un lapso de tiempo (de X año a Y año)
+Géneros más comunes en X año
+Año donde se estrenaron/terminaron más series
+
+
+Posibles limitaciones del proyecto:
+-Acceso a internet: Actualmente no dispongo de ninguna red Wi-Fi en la que trabajr y me encuentro con la imposibilidad de instalar libreías importantes como lo son Pandas o Streamlit. Por lo cual he de empezar el proyecto sin poder probar las líneas de código que implemente
+ 
