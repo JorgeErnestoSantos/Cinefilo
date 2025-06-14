@@ -11,7 +11,11 @@ class analizador_pelis:
                 pelis_año.append(i)
         generos_año = defaultdict(int)
         for i in pelis_año:
-        https://www.instagram.com/carlotabmendo?igsh=dmExamR2aTh1b3V1
+            if i.generos!= []:
+                for j in i.generos:
+                    generos_año[j] += 1
+        plt.figure(figsize=(15, 7))
+        barras = plt.bar (generos_año.keys(), generos_año.values(), color='#1f77b4', width=0.6 )
         plt.title('Películas por género', fontsize=14, pad=20)
         plt.xlabel('Género', fontsize=12)
         plt.ylabel('Cantidad de películas', fonsize=12)
@@ -27,16 +31,18 @@ class analizador_pelis:
         a = 0
         for i in self.pelis:
             if i.año_estreno == año:
-                if i.duracion >= a:
-                    a = i.duracion
-                    n = i.nombre
+                if i.duracion != None:
+                    if i.duracion >= a:
+                        a = i.duracion
+                        n = i.nombre
         print (f"{n}:{a} minutos")
     def menor_duraciom (self, año):
         n = self.pelis[0].nombre
         a = self.pelis[0].duracion
         for i in self.pelis:
             if i.año_estreno == año:
-                if i.duracion <= a:
-                    a = i.duracion
-                    n = i.nombre
+                if i.duracion != None
+                    if i.duracion <= a:
+                        a = i.duracion
+                        n = i.nombre
         print (f"{n}: {a} minutos")
