@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 from collections import defaultdict
-import Analisis_p
+import Análisis_p
 import Analisis_s
 import Load_data
 
@@ -20,7 +20,7 @@ if opcion == "Series":
     else:
         print(bd_series.año_finalizacion)
 else:
-    bd_pelis = Analisis_p.analizador_pelis(Load_data.lista_peliculas)
+    bd_pelis = Análisis_p.analizador_pelis(Load_data.lista_peliculas)
     opt = st.radio("¿Qué tipo de análisis te gustaría hacer?", options=["Géneros más populares en X año", "Película más duradera en X año", "Película menos duradera en X año"], horizontal= True)
     if opt == "Géneros más populares en X año":
         año_p = st.slider("Año", 1888 , 2025)
