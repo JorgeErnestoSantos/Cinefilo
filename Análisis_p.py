@@ -41,7 +41,7 @@ class analizador_pelis:
         a = self.pelis[0].duracion
         for i in self.pelis:
             if i.año_estreno == año:
-                if i.duracion != None
+                if i.duracion != None:
                     if i.duracion <= a:
                         a = i.duracion
                         n = i.nombre
