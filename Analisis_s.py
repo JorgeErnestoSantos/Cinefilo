@@ -1,4 +1,4 @@
-import matplotlib.pylot as plt
+import matplotlib.pyplot as plt
 from collections import defaultdict
 class analizador_series:
     def __init__ (self, series:list):
