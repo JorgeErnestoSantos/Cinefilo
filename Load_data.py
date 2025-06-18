@@ -37,9 +37,10 @@ Bd = BD.to_dict("records")
 for i in Bd:
     i["startYear"] = p.to_numeric(i["startYear"], errors= 'coerce')
     i["endYear"] = p.to_numeric(i["endYear"], errors='coerce')
+    i["genres"] = [j for j in i["genres"].split(",")]
 lista_series = []
 for i in Bd:
-    serie = Serie (nombre= i["primaryTitle"], nombre_original= i["originalTitle"], generos= i["genres"] if p.notna(i["genres"]) else [] , año_inicio= int(i["startYear"]) if p.notna(i["startYear"]) else None , año_fin= int(i["endYear"]) if p.notna(i["endYear"]) else None)
+    serie = Serie (nombre= i["primaryTitle"], nombre_original= i["originalTitle"], generos= i["genres"] , año_inicio= int(i["startYear"]) if p.notna(i["startYear"]) else None , año_fin= int(i["endYear"]) if p.notna(i["endYear"]) else None)
     lista_series.append(serie) 
 
- 
+print (lista_series[1].generos)
