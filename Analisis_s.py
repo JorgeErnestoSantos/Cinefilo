@@ -6,7 +6,7 @@ class analizador_series:
     def graf_genero_año (self, año):
         series_año = []
         for i in self.series:
-            if i.año_inicio != None:
+            if i.año_inicio != None and i.año_fin != None:
                 if i.año_inicio <= año and i.año_fin >= año:
                     series_año.append(i)
         generos_año = defaultdict(int)
@@ -31,18 +31,28 @@ class analizador_series:
         for i in self.series:
             if i.año_inicio != None:
                 c = i.año_inicio
+                b = i.año_inicio
+                a = i.año_inicio
                 años[i.año_inicio] += 1
-        for i in años.items:
-            if i[1] >= años[c]:
-                c = i[0]
-        print (f"{c}: {años[c]}")
+        for i in años.items():
+            if i [1] != None:    
+                if i[1] >= años[c]:
+                    a = b
+                    b = c
+                    c = i[0]
+        return f"{c}: {años[c]} series, {b}: {años[b]} series, {a}: {años[a]} series"
     def año_finalizacion (self):
         años = defaultdict(int)
         for i in self.series:
             if i.año_fin != None:
                 c = i.año_fin
+                b = i.año_fin
+                a = i.año_fin
                 años[i.año_fin] += 1
         for i in años.items():
-            if i[1] >= años[c]:
-                c = i[0]
-        print (f"{c}:{años[c]}")
+            if i[1] != None:   
+                if i[1] >= años[c]:
+                    a = b
+                    b = c
+                    c = i[0]
+        return f"{c}: {años[c]} series, {b}: {años[b]} series, {a}: {años[a]} series"
