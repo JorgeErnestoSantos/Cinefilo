@@ -18,7 +18,7 @@ class analizador_pelis:
         barras = plt.bar (generos_año.keys(), generos_año.values(), color='#1f77b4', width=0.6 )
         plt.title('Películas por género', fontsize=14, pad=20)
         plt.xlabel('Género', fontsize=12)
-        plt.ylabel('Cantidad de películas', fonsize=12)
+        plt.ylabel('Cantidad de películas')
         plt.xticks(rotation=45, ha='right')
         plt.grid(axis='y', linestyle='--', alpha=0.4)
         for bar in barras:
@@ -28,21 +28,37 @@ class analizador_pelis:
         plt.show
     def mayor_duración (self, año: int):
         n = ""
+        m = ""
+        ñ = ""
         a = 0
+        b = 0
+        c = 0
         for i in self.pelis:
             if i.año_estreno == año:
                 if i.duracion != None:
                     if i.duracion >= a:
+                        m = ñ
+                        c = b
+                        ñ = n
+                        b = a
                         a = i.duracion
                         n = i.nombre
-        print (f"{n}:{a} minutos")
+        return (f"{n}: {a} minutos, {ñ}: {b} minutos, {m}: {c} minutos")
     def menor_duraciom (self, año):
         n = self.pelis[0].nombre
         a = self.pelis[0].duracion
+        m = n
+        ñ = n
+        b = a
+        c = a
         for i in self.pelis:
             if i.año_estreno == año:
                 if i.duracion != None:
                     if i.duracion <= a:
+                        m = ñ
+                        c = b
+                        ñ = n
+                        b = a
                         a = i.duracion
                         n = i.nombre
-        print (f"{n}: {a} minutos")
+        return(f"{n}: {a} minutos, {ñ}: {b} minutos, {m}: {c} minutos")
