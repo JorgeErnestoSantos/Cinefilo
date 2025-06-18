@@ -1,8 +1,8 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 from collections import defaultdict
-import Analisis_p
-import Análisis_s
+import Análisis_p
+import Analisis_s
 import Load_data
 
 st.set_page_config(page_title="Análisis de series y películas", layout="wide")
