@@ -35,11 +35,8 @@ Películas:
 Años con más estrenos de X género
 Géneros más comunes en X año
 Películas más duraderas/cortas de X año
-Comparación de géneros (ver cuál es más común en Películas)
-Años donde se estrenaron más películas
 
 Series:
-Análisis de series con mayor/menor tiempo en emisión en un lapso de tiempo (de X año a Y año)
 Géneros más comunes en X año
 Año donde se estrenaron/terminaron más series
 
