@@ -32,15 +32,9 @@ Al terminar la primera versión del proyecto se podría incluir la base de datos
 Posibles análisis a realizar:
 
 Películas: 
-Años con más estrenos de X género
 Géneros más comunes en X año
 Películas más duraderas/cortas de X año
 
 Series:
 Géneros más comunes en X año
 Año donde se estrenaron/terminaron más series
-
-
-Posibles limitaciones del proyecto:
--Acceso a internet: Actualmente no dispongo de ninguna red Wi-Fi en la que trabajr y me encuentro con la imposibilidad de instalar libreías importantes como lo son Pandas o Streamlit. Por lo cual he de empezar el proyecto sin poder probar las líneas de código que implemente
- 
